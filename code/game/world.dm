@@ -4,7 +4,7 @@
 #define SET_THROTTLE(TIME, REASON) throttle[1] = base_throttle + (TIME); throttle[2] = (REASON);
 
 
-var/global/server_name = "Baystation 12"
+var/global/server_name = "Project Utopia"
 var/global/game_id = null
 
 GLOBAL_VAR(href_logfile)

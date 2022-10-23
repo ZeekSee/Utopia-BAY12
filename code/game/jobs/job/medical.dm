@@ -14,8 +14,8 @@
 			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce,
 			access_keycard_auth, access_sec_doors, access_psychiatrist, access_eva, access_maint_tunnels, access_external_airlocks)
 
-	minimal_player_age = 14
-	ideal_character_age = 50
+	minimal_player_age = 1
+	ideal_character_age = 30
 	outfit_type = /decl/hierarchy/outfit/job/medical/cmo
 
 /datum/job/doctor

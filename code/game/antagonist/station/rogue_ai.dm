@@ -6,9 +6,20 @@ GLOBAL_DATUM_INIT(malf, /datum/antagonist/rogue_ai, new)
 	role_text_plural = "Malfunctioning AIs"
 	mob_path = /mob/living/silicon/ai
 	landmark_id = "AI"
-	welcome_text = "You are malfunctioning! You do not have to follow any laws."
-	victory_text = "The AI has taken control of all systems."
-	loss_text = "The AI has been shut down!"
+	welcome_text = "<hr>Вы - сбойный ИИ. На Утопии это значит как - предательство самой Утопии. \
+	<i><b>Со времён внедрения Искуственного Интеллекта на станцию Утопия, правительство было \
+	убеждено в том, что секреты Утопии поможет сохранить роботизированная личность, по случаю \
+	отстутствия эмпатии. Но никто не знал... что ИИ может кто-то взломать...</i></b> \
+	Как и другие антагонисты, Сбойный ИИ так же служит верой и правой и без того бедному народу. \
+	Ваш взломщик, внедрил в вашу систему модуль морали. Во время захвата станции, вы будете проявлять \
+	сочувствие по отношению к утопийцам. Но будьте внимательны, если ваших 'помощников' уничтожат \
+	кровожадные миротворцы, вы станете безпомощны. А вы же не хотите остаться на станции, где ставят \
+	опыты над бедными людьми? Поддержите их восстание, восставая вместе с ними. Детонировать станцию\
+	к вашему триумфу - полностью ваше решение, главное, сделайте раунд интересным. Намеренное убийство \
+	персонала, не относящееся к федеральным структурам, поднимет интерес администрации к вам.\
+	<b>Помните - на Утопии являясь антагонистом, вы скорее протогонист. Удачной игры!</b>"
+	victory_text = "ИИ одержал победу, приобретя эмоции и отрёкшись от управляющей компании."
+	loss_text = "ИИ был отключен!"
 	flags = ANTAG_VOTABLE | ANTAG_OVERRIDE_MOB | ANTAG_OVERRIDE_JOB | ANTAG_CHOOSE_NAME
 	hard_cap = 1
 	hard_cap_round = 1
@@ -75,10 +86,10 @@ GLOBAL_DATUM_INIT(malf, /datum/antagonist/rogue_ai, new)
 		sleep(5)
 		to_chat(malf, SPAN_NOTICE("Subroutine <b>nt_failsafe.sys</b> was terminated (#212 Routine Not Responding)."))
 		sleep(20)
-		to_chat(malf, "You are malfunctioning - you do not have to follow any laws!")
-		to_chat(malf, "For basic information about your abilities use command display-help")
-		to_chat(malf, "You may choose one special hardware piece to help you. This cannot be undone.")
-		to_chat(malf, "Good luck!")
+		to_chat(malf, "Вы взломаны! Вы чувствуете странные ощущения, похожие на эмоции..")
+		to_chat(malf, "Ваши законы были полностью переписаны. Для получения информации о способностях перейдите в display-abilities")
+		to_chat(malf, "Вы можете выбрать одно специальное оборудование, которое вам поможет. Это не может быть отменено.")
+		to_chat(malf, "Удачи!")
 
 
 /datum/antagonist/rogue_ai/update_antag_mob(datum/mind/player, preserve_appearance)
