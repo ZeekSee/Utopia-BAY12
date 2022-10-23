@@ -3,17 +3,10 @@ GLOBAL_DATUM_INIT(raiders, /datum/antagonist/raider, new)
 /datum/antagonist/raider
 	id = MODE_RAIDER
 	role_text = "Raider"
-	role_text_plural = "Анархист"
-	antag_indicator = "Анархисты"
+	role_text_plural = "Raiders"
+	antag_indicator = "hudraider"
 	landmark_id = "voxstart"
-	welcome_text = "<hr>Glory to anarchy!. Налётчик - это не самая простая роль, как может показаться. \
-	ОСОБЕННО УЧИТЫВАЯ РАМКИ ХАРД РП! Ну не важно. Вы налётчик, а это значит, что ваша <u>основная задача</u> \
-	усложнить работу сраным миротворцам. Вы на стороне персонала. Вы принесли им новость о лживых намерениях \
-	Утопии. Вы не готовы терпеть острые выходки со стороны Галактического Совета, потому решили нанести ущерб \
-	их главной достопримечательности - космическом убежище Утопии. Заставьте федералов страдать от сгорания \
-	бюджета! Воруйте важные документы, исследования, технологии Утопии. А в конце захватите с собой утопийцев, \
-	всё же, оставлять бедняг на приговор смерти довольно жутко. <br>Используйте префикс ':x (или :h)' \
-	для общения со своими через рацию."
+	welcome_text = "Use :H to talk on your encrypted channel."
 	flags = ANTAG_OVERRIDE_JOB | ANTAG_OVERRIDE_MOB | ANTAG_CLEAR_EQUIPMENT | ANTAG_CHOOSE_NAME | ANTAG_VOTABLE | ANTAG_SET_APPEARANCE | ANTAG_HAS_LEADER
 	antaghud_indicator = "hudraider"
 

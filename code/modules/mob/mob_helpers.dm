@@ -220,10 +220,10 @@ var/global/list/organ_rel_size = list(
 	if(re_encode)
 		. = html_encode(.)
 
-proc/slur(phrase)
+/proc/slur(phrase)
 	phrase = html_decode(phrase)
-	var/leng=length_char(phrase)	// INF Localization
-	var/counter=length_char(phrase)	// INF Localization
+	var/leng = length_char(phrase)
+	var/counter = length_char(phrase)
 	var/newphrase=""
 	var/newletter=""
 	while(counter>=1)
@@ -233,19 +233,15 @@ proc/slur(phrase)
 			if(lowertext(newletter)=="s")	newletter="ch"
 			if(lowertext(newletter)=="a")	newletter="ah"
 			if(lowertext(newletter)=="c")	newletter="k"
-
-			if(lowertext(newletter)=="о")	newletter="у"
-			if(lowertext(newletter)=="с")	newletter="з"
-			if(lowertext(newletter)=="а")	newletter="ах"
-			if(lowertext(newletter)=="с")	newletter="к"
-			if(lowertext(newletter)=="ч")	newletter="з"
-		switch(rand(1,15))
-			if(1,3,5,8)	newletter="[lowertext(newletter)]"
-			if(2,4,6,15)	newletter="[uppertext(newletter)]"
-			if(7)	newletter+="'"
-			//if(9,10)	newletter="<b>[newletter]</b>"
-			//if(11,12)	newletter="<big>[newletter]</big>"
-			//if(13)	newletter="<small>[newletter]</small>"
+		var/randomizer = rand(1, 15)
+		switch(randomizer)
+			if (1 to 4)
+				newletter="[lowertext(newletter)]"
+			if (5 to 8)
+				newletter="[uppertext(newletter)]"
+			if (9)
+				newletter+="'"
+			// 10-15 - Do nothing
 		newphrase+="[newletter]";counter-=1
 	return newphrase
 
@@ -257,12 +253,7 @@ proc/slur(phrase)
 	p = 1//1 is the start of any word
 	while(p <= n)//while P, which starts at 1 is less or equal to N which is the length.
 		var/n_letter = copytext_char(te, p, p + 1)//copies text from a certain distance. In this case, only one letter at a time.
-
-		var/list/letters_list = list(
-			"b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","y","z",
-			"б","с","д","ф","г","ч","ж","к","л","т","н","р","т","в","х","у","з")
-
-		if (prob(80) && (ckey(n_letter) in letters_list))
+		if (prob(80) && (ckey(n_letter) in list("b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","y","z")))
 			if (prob(10))
 				n_letter = text("[n_letter]-[n_letter]-[n_letter]-[n_letter]")//replaces the current letter with this instead.
 			else

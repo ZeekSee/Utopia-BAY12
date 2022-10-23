@@ -188,12 +188,12 @@ var/global/list/ai_verbs_default = list(
 	ai_radio.myAi = src
 
 /mob/living/silicon/ai/proc/on_mob_init()
-	to_chat(src, "<B>Вы играете за Искусстенный Интеллект [station_name()]. ИИ не может перемещаться сам по себе, но можно взаимодействовать со множеством электронных объектов в момент, когда они находятся его зоне видимости (через камеры).</B>")
-	to_chat(src, "<B>Чтобы увидеть другие зоны, нажмите на себя для выведения списка доступных камер.</B>")
-	to_chat(src, "<B>В момент просмотра через камеры, вы можете использовать подключенные к системе энергоснабжения объекты. Например компьютеры, АПС, шлюзы, интеркомы, системы контроля атмосферы и т.п.</B>")
-	to_chat(src, "Чтобы начать взаимодействие, просто нажмите на объект.")
-	to_chat(src, "Для общения с подчиненными вам киборгами, андроидами и роботами пишите перед своими сообщениями в игровой чат ',b'. Для общения через активный голопад, используйте ':h'.")
-	to_chat(src, "Для использования каналов различных департаментов:")
+	to_chat(src, "<B>You are playing the [station_name()]'s AI. The AI cannot move, but can interact with many objects while viewing them (through cameras).</B>")
+	to_chat(src, "<B>To look at other areas, click on yourself to get a camera menu.</B>")
+	to_chat(src, "<B>While observing through a camera, you can use most (networked) devices which you can see, such as computers, APCs, intercoms, doors, etc.</B>")
+	to_chat(src, "To use something, simply click on it.")
+	to_chat(src, "Use say [get_language_prefix()]b to speak to your cyborgs through binary. Use say :h to speak from an active holopad.")
+	to_chat(src, "For department channels, use the following say commands:")
 
 	var/radio_text = ""
 	for(var/i = 1 to silicon_radio.channels.len)
@@ -211,7 +211,7 @@ var/global/list/ai_verbs_default = list(
 
 	if (GLOB.malf && !(mind in GLOB.malf.current_antagonists))
 		show_laws()
-		to_chat(src, "<b>Данные законы могут быть изменены другими игроками, случайными событиями или в том случае, если вы являетесь сбойным ИИ.</b>")
+		to_chat(src, "<b>These laws may be changed by other players or by other random events.</b>")
 
 	job = "AI"
 	setup_icon()

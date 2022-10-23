@@ -14,8 +14,8 @@
 			            access_tox_storage, access_teleporter, access_sec_doors, access_heads,
 			            access_research, access_robotics, access_xenobiology, access_ai_upload, access_tech_storage,
 			            access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_network, access_network_admin, access_research_storage)
-	minimal_player_age = 1
-	ideal_character_age = 30
+	minimal_player_age = 14
+	ideal_character_age = 50
 	outfit_type = /decl/hierarchy/outfit/job/science/rd
 
 /datum/job/scientist

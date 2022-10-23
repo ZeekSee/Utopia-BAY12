@@ -14,7 +14,7 @@
 			            access_forensics_lockers, access_morgue, access_maint_tunnels, access_all_personal_lockers,
 			            access_research, access_engine, access_mining, access_medical, access_construction, access_mailsorting,
 			            access_bridge, access_hos, access_RC_announce, access_keycard_auth, access_gateway, access_external_airlocks)
-	minimal_player_age = 1
+	minimal_player_age = 14
 	outfit_type = /decl/hierarchy/outfit/job/security/hos
 
 /datum/job/hos/equip(mob/living/carbon/human/H)
@@ -33,7 +33,7 @@
 	selection_color = "#601c1c"
 	economic_power = 5
 	access = list(access_security, access_eva, access_sec_doors, access_brig, access_armory, access_maint_tunnels, access_morgue, access_external_airlocks)
-	minimal_player_age = 1
+	minimal_player_age = 7
 	outfit_type = /decl/hierarchy/outfit/job/security/warden
 
 /datum/job/detective
@@ -48,11 +48,11 @@
 	alt_titles = list("Forensic Technician" = /decl/hierarchy/outfit/job/security/detective/forensic)
 	economic_power = 5
 	access = list(access_security, access_sec_doors, access_forensics_lockers, access_morgue, access_maint_tunnels)
-	minimal_player_age = 1
+	minimal_player_age = 7
 	outfit_type = /decl/hierarchy/outfit/job/security/detective
 
 /datum/job/officer
-	title = "Peacemaker"
+	title = "Security Officer"
 	department = "Security"
 	department_flag = SEC
 
@@ -60,8 +60,8 @@
 	spawn_positions = 4
 	supervisors = "the head of security"
 	selection_color = "#601c1c"
-	alt_titles = list("Junior Peacemaker")
+	alt_titles = list("Junior Officer")
 	economic_power = 4
 	access = list(access_security, access_eva, access_sec_doors, access_brig, access_maint_tunnels, access_morgue, access_external_airlocks)
-	minimal_player_age = 1
+	minimal_player_age = 7
 	outfit_type = /decl/hierarchy/outfit/job/security/officer

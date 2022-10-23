@@ -7,15 +7,7 @@ GLOBAL_DATUM_INIT(changelings, /datum/antagonist/changeling, new)
 	feedback_tag = "changeling_objective"
 	blacklisted_jobs = list(/datum/job/ai, /datum/job/cyborg, /datum/job/submap)
 	protected_jobs = list(/datum/job/officer, /datum/job/warden, /datum/job/detective, /datum/job/captain, /datum/job/hos)
-	welcome_text = "Используйте say \"%LANGUAGE_PREFIX%g (сообщение)\", чтобы связаться с другими генокрадами.<br>\
-	Мы являемся частью общности - одним из сородичей, что трудится на её благо и ставить её интересы \
-	выше собственных, в том числе и жизни. Вместе, члены общности должны ассимилировать полезный генетический материал \
-	и украсть определенные вещи, которые облегчат охоту в будущем. \
-	Наше тело требует новые геномы, чтобы жить и развиваться. Не стоит поглощать или убивать сородичей \
-	- мы все практически родственники.<br>\
-	Избегайте поглощения существ, чей геном бесполезен для нас. Кровожадность - это не лучшая черта высшей формы жизни... \
-	Не говоря уже о том, что это привлечёт лишнее внимание от Центрального Командования. Например, сил быстрого реагирования.<br>\
-	Удачной охоты, сталкер."
+	welcome_text = "Use say \"%LANGUAGE_PREFIX%g message\" to communicate with your fellow changelings. Remember: you get all of their absorbed DNA if you absorb them."
 	flags = ANTAG_SUSPICIOUS | ANTAG_RANDSPAWN | ANTAG_VOTABLE
 	antaghud_indicator = "hudchangeling"
 
