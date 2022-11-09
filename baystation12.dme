@@ -3231,5 +3231,6 @@
 #include "interface\interface.dm"
 #include "interface\skin.dmf"
 #include "maps\_maps.dm"
+#include "maps\utopia\utopia_define.dm"
 #include "~code\global_init.dm"
 // END_INCLUDE

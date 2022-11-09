@@ -1,0 +1,114 @@
+//The following is a list of defs and blacklist to be used (or not) for the Sierra loadout.
+/datum/map/utopia
+	loadout_blacklist = list(/datum/gear/union_card, /datum/gear/eyes/security/aviators, \
+	/datum/gear/suit/labcoat_corp, /datum/gear/suit/labcoat_corp_rd, \
+	/datum/gear/uniform/corp_guard, /datum/gear/uniform/corp_exec, /datum/gear/uniform/corp_overalls, /datum/gear/uniform/corp_flight,
+	/datum/gear/uniform/corp_exec_jacket, /datum/gear/uniform/corporate)
+
+//For jobs that allow for decorative or ceremonial clothing
+#define FORMAL_ROLES list(\
+	/datum/job/iaa, \
+	/datum/job/psychiatrist, \
+	/datum/job/assistant, /datum/job/bartender, /datum/job/submap/merchant, /datum/job/submap/merchant_trainee, \
+	/*/datum/job/stowaway,*/ /datum/job/detective)
+
+//For civilian jobs that may have a uniform, but not a strict one
+#define SEMIFORMAL_ROLES list(\
+	/datum/job/assistant,/datum/job/mining, \
+	/datum/job/psychiatrist, /datum/job/bartender, /datum/job/submap/merchant, /datum/job/submap/merchant_trainee, \
+	/*/datum/job/stowaway,*/ /datum/job/detective)
+
+//For civilian jobs that may have a strict uniform.
+#define SEMIANDFORMAL_ROLES list(\
+	/datum/job/assistant,/datum/job/mining, \
+	/datum/job/psychiatrist, /datum/job/bartender, /datum/job/submap/merchant, /datum/job/submap/merchant_trainee, \
+	/datum/job/iaa, \
+	/*/datum/job/stowaway,*/ /datum/job/detective)
+
+//For NanoTrasen employees
+#define NANOTRASEN_ROLES list(\
+	/datum/job/captain, /datum/job/hop, /datum/job/cmo, /datum/job/chief_engineer, /datum/job/hos, \
+	/datum/job/iaa, \
+	/datum/job/senior_engineer, /datum/job/engineer, /datum/job/infsys, /datum/job/engineer_trainee, \
+	/datum/job/officer, /datum/job/warden, /datum/job/detective, /datum/job/security_assistant, \
+	/datum/job/senior_doctor, /datum/job/doctor, /datum/job/doctor_trainee,/datum/job/chemist, \
+	/datum/job/psychiatrist, \
+	/datum/job/qm, /datum/job/cargo_tech, /datum/job/cargo_assistant,\
+	/datum/job/janitor, /datum/job/chef, /datum/job/bartender,\
+	/datum/job/mining)
+
+//For roles with no uniform or formal clothing requirements
+#define RESTRICTED_ROLES list(\
+	/datum/job/assistant, /datum/job/bartender,\
+	/datum/job/submap/merchant, /datum/job/submap/merchant_trainee, /*/datum/job/stowaway*/)
+
+//For members of the command department
+#define COMMAND_ROLES list(\
+	/datum/job/captain, /datum/job/hop,\
+	/datum/job/cmo, /datum/job/chief_engineer,\
+	/datum/job/hos)
+
+//For members of the medical department
+#define MEDICAL_ROLES list(\
+	/datum/job/cmo, /datum/job/senior_doctor, /datum/job/doctor,\
+	/datum/job/doctor_trainee,\
+	/datum/job/psychiatrist, /datum/job/chemist)
+
+//For members of the medical department, roboticists, and some Research
+#define STERILE_ROLES list(\
+	/datum/job/cmo, /datum/job/senior_doctor, /datum/job/doctor,\
+	/datum/job/doctor_trainee, /datum/job/chemist, /datum/job/psychiatrist,\
+	/datum/job/chemist)
+
+//For members of the engineering department
+#define ENGINEERING_ROLES list(\
+	/datum/job/chief_engineer, /datum/job/senior_engineer, /datum/job/engineer, /datum/job/infsys,\
+	 /datum/job/engineer_trainee)
+
+//For members of Engineering, Cargo, and Research
+#define TECHNICAL_ROLES list(\
+	/datum/job/senior_engineer, /datum/job/engineer, /datum/job/qm,\
+	/datum/job/cargo_tech, /datum/job/cargo_assistant,/datum/job/mining,\
+	/datum/job/submap/merchant, /datum/job/submap/merchant_trainee,\
+	/datum/job/chief_engineer, /datum/job/infsys,\
+	/datum/job/engineer_trainee)
+
+//For members of the security department
+#define SECURITY_ROLES list(\
+	/datum/job/hos, /datum/job/warden, /datum/job/detective, /datum/job/officer, /datum/job/security_assistant)
+
+//For members of the supply department
+#define SUPPLY_ROLES list(\
+	/datum/job/qm, /datum/job/cargo_tech, /datum/job/cargo_assistant)
+
+//For members of the service department
+#define SERVICE_ROLES list(\
+	/datum/job/janitor, /datum/job/chef, /datum/job/bartender)
+
+//For members of the research department and jobs that are scientific
+#define RESEARCH_ROLES list(/datum/job/iaa)
+
+//For jobs that spawn with weapons in their lockers
+#define ARMED_ROLES list(\
+	/datum/job/captain, /datum/job/hop, /datum/job/hos,\
+	/datum/job/officer, /datum/job/warden, /datum/job/detective, /datum/job/security_assistant, /datum/job/submap/merchant, /datum/job/submap/merchant_trainee)
+
+//For jobs that spawn with armor in their lockers
+#define ARMORED_ROLES list(\
+	/datum/job/captain, /datum/job/hop, /datum/job/cmo,\
+	/datum/job/chief_engineer, /datum/job/hos, /datum/job/qm,\
+	/datum/job/warden, /datum/job/detective, /datum/job/officer, \
+	/datum/job/submap/merchant, /datum/job/submap/merchant_trainee)
+
+#define CONTRACT_ROLES list(\
+	/datum/job/engineer, /datum/job/engineer_trainee, \
+	/datum/job/officer, /datum/job/detective, \
+	/datum/job/senior_doctor, /datum/job/doctor, /datum/job/doctor_trainee,/datum/job/chemist, /datum/job/psychiatrist, \
+	/datum/job/cargo_tech,  /datum/job/cargo_assistant, /datum/job/mining, \
+	/datum/job/janitor, /datum/job/chef, /datum/job/bartender, /datum/job/infsys)
+
+#define CIVILIAN_ROLES list(\
+	/datum/job/detective, \
+	/datum/job/psychiatrist, \
+	/datum/job/cargo_assistant, \
+	/datum/job/janitor, /datum/job/chef, /datum/job/bartender, /datum/job/assistant)
